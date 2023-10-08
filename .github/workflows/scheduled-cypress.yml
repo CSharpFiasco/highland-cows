@@ -1,0 +1,22 @@
+name: Scheduled Cypress Run
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - main
+  schedule:
+    - cron: '0 12 * * *'
+
+jobs:
+    build_and_test:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+            with:
+              submodules: true
+          - name: Run cypress
+            run: npm run cy:run
