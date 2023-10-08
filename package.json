@@ -1,0 +1,16 @@
+{
+  "name": "highland-cows",
+  "version": "1.0.0",
+  "description": "Check highland cows",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "cypress": "^12.17.4",
+    "typescript": "^5.1.6"
+  }
+}
